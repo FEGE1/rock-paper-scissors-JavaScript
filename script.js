@@ -43,37 +43,37 @@ function playRound(humanScore,computerScore){
         }
         else{
             if(humanChoice==computerChoice){
-                alert("No one win this round !"+getScore(humanScore,computerScore,computerChoice));
+                alert("No one win this round !"+getScore(humanScore,computerScore,computerChoice,humanChoice));
             }
             else{
                 if(humanChoice=="rock"){
                     if(computerChoice=="paper"){
                         computerScore += 1;
-                        alert("Computer win this round !"+getScore(humanScore,computerScore,computerChoice));
+                        alert("Computer win this round !"+getScore(humanScore,computerScore,computerChoice,humanChoice));
                     }
                     else{
                         humanScore +=1;
-                        alert("You win !"+getScore(humanScore,computerScore,computerChoice));
+                        alert("You win !"+getScore(humanScore,computerScore,computerChoice,humanChoice));
                     }
                 }
                 else if(humanChoice=="paper"){
                     if(computerChoice=="rock"){
                         humanScore += 1;
-                        alert("You win !"+getScore(humanScore,computerScore,computerChoice));
+                        alert("You win !"+getScore(humanScore,computerScore,computerChoice,humanChoice));
                     }
                     else{
                         computerScore += 1;
-                        alert("Computer win this round !"+getScore(humanScore,computerScore,computerChoice));
+                        alert("Computer win this round !"+getScore(humanScore,computerScore,computerChoice,humanChoice));
                     }
                 }
                 else{
                     if(computerChoice=="rock"){
                         computerScore += 1;
-                        alert("Computer win this round !"+getScore(humanScore,computerScore,computerChoice));
+                        alert("Computer win this round !"+getScore(humanScore,computerScore,computerChoice,humanChoice));
                     }
                     else{
                         humanScore += 1;
-                        alert("You win !"+getScore(humanScore,computerScore,computerChoice));
+                        alert("You win !"+getScore(humanScore,computerScore,computerChoice,humanChoice));
                     }
                 }
         
@@ -88,9 +88,9 @@ function playRound(humanScore,computerScore){
     }
 }
 
-function getScore(x,y,z){
-    if(z){
-        return "\n\nComputer Choice: "+z+"\n\nYour Score: "+x+"\nComputer Score: "+y;    
+function getScore(x,y,z,j){
+    if(z && j){
+        return "\n\nYour Choice: "+j+"\nComputer Choice: "+z+"\n\nYour Score: "+x+"\nComputer Score: "+y;    
     }
     else{
         return "\n\nYour Score: "+x+"\nComputer Score: "+y;

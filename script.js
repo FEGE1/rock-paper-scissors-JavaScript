@@ -90,7 +90,7 @@ function playRound(humanScore,computerScore){
 
 function getScore(x,y,z){
     if(z){
-        return "\n\nComputer Choice: "+z+"\nYour Score: "+x+"\nComputer Score: "+y;    
+        return "\n\nComputer Choice: "+z+"\n\nYour Score: "+x+"\nComputer Score: "+y;    
     }
     else{
         return "\n\nYour Score: "+x+"\nComputer Score: "+y;

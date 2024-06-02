@@ -8,7 +8,7 @@ playRound(humanScore,computerScore,computerChoice);
 
 function getComputerChoice(){
     let x = arr[Math.floor(Math.random()*3)];
-    return computerChoice=x;
+    return x;
 }
 
 function  getHumanChoice(){
@@ -20,20 +20,20 @@ function  getHumanChoice(){
         arr_item=arr[i];
         if(arr_item==answer){
             y += 1;       
-            if(y==1){
-                return humanChoice=answer;
-            }
         }
-        else{
-            return humanChoice="wrong";
-        }
+    }
+    if(y==1){
+        return answer;
+    }
+    else{
+        return "wrong";
     }
 }
 
 function playRound(humanScore,computerScore){
     while(humanScore < 5 && computerScore < 5){
-        getHumanChoice();
-        getComputerChoice();
+        humanChoice=getHumanChoice();
+        computerChoice=getComputerChoice();
 
         console.log("Human choice: "+humanChoice);
         console.log("Computer choice: "+computerChoice);
